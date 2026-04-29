@@ -30,6 +30,12 @@ The dataset comes from Kaggle and contains Fitbit user data, including daily act
 |Questions:|Do users with higher step counts burn more calories? <br> Which user segment is the largest? <br>Is there a large discrepancy in step counts between low- and high-activity users?|
 |Thoughts and conclusions:|Users with higher levels of physical activity report a higher number of days of recorded activity, which may indicate greater engagement with the device. At the same time, the differences between segments are relatively small (around 6 days in the analyzed period), suggesting that activity level is not strongly associated with regular use of the tracker.<br><br>User segmentation revealed significant differences in activity levels. Low-active users average approximately 2,936 steps per day, while highly active users average approximately 12,488 steps, almost four times more. Moderately active users constitute the largest group, achieving approximately 7,620 steps per day, indicating that most users are at a moderate level of activity.<br><br>The analysis revealed a positive but relatively weak relationship between step count and calories burned (R² ≈ 0.19). This means that step count explains only a small portion of the variability in calorie burn, suggesting that other factors, such as activity intensity, individual user characteristics, and other forms of exercise, also play a significant role.|
 
+#### User Segmentations
+![User Segmentation](visuals/segments.png)
+
+#### Steps vs Calories
+![Steps vs Calories](visuals/steps_vs_calories.png)
+
 | | Sleep analysis|
 |:---|:---|
 |Description of operation:|Sleep data is tied to the day the sleep session began, meaning it doesn't accurately reflect the midnight-to-midnight cycle. This can impact daily analysis, but doesn't significantly impact overall trend analysis. <br>Sleep analysis efforts included:<br> - Converting minutes to sleep duration <br> - User segmentation based on average sleep duration <br> - Sleep efficiency segmentation|
@@ -41,6 +47,9 @@ The dataset comes from Kaggle and contains Fitbit user data, including daily act
 |Description of operation:|Sleep data is available for only a subset of observations, which may indicate irregular device use at night and introduce bias into the analysis. Analysis was limited to days when both activity and sleep data were available, ensuring a consistent comparison. However, it should be noted that this may limit the sample to more engaged users. Of the over 900 rows of activity data, only 410 corresponding sleep data rows are available. Analysis activities for the sleep and activity summary included:<br> - Creating a new table containing only sleep and step data <br> - Adding activity level and sleep efficiency to the summary <br> - Creating a secondary pivot table that included average sleep time and average sleep efficiency for each user segment <br> - Visualizing the sleep vs. activity relationship|
 |Questions:|Does more activity translate into better sleep?|
 |Thoughts and conclusions:|The analysis revealed no significant relationship between physical activity level and sleep duration (R² ≈ 0.04). A very weak negative relationship was observed, but its strength was too low to be considered significant. The results suggest that step count is not a significant factor in sleep duration.<br><br>Analysis of activity segments revealed that users with higher activity levels achieved, on average, shorter sleep duration and slightly lower sleep efficiency. However, these differences were relatively small, and previous correlation analysis indicated no significant relationship between activity and sleep.<br><br>Users with higher levels of physical activity achieved slightly shorter sleep duration and lower sleep efficiency compared to less active users. However, these differences were small and - combined with the very low correlation (R² ≈ 0.04) - suggested no significant relationship between physical activity and sleep. This may indicate that other factors, such as lifestyle, daily schedule, or stress levels, influence sleep quality and duration.|
+
+#### Activity vs sleep
+![Activity vs Sleep](visuals/activity_vs_sleep.png)
   
 # 🔍 Key Insights
 
@@ -68,3 +77,8 @@ Activity and sleep monitoring features should be treated as independent areas of
 # 🛠 Tools Used
 - Google Spreadsheet (data cleaning, analysis, pivot tables)
 - GitHub (project presentation)
+
+# 📌 Future Work
+- Extend analysis using SQL
+- Build dashboard in Tableau
+- Use full dataset
