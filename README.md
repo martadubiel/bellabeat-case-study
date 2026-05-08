@@ -1,17 +1,46 @@
 
-# 📊 Bellabeat Case Study – Data Analysis Project
+# 📊 Bellabeat Case Study | Excel + SQL Data Analysis
 # 🧠 Business Task
 
-The goal of this analysis is to understand how users interact with fitness tracking devices in order to support Bellabeat’s marketing strategy.
+Bellabeat is a wellness technology company focused on smart devices that help users monitor their health and lifestyle habits.  
+
+The goal of this project is to analyze Fitbit user data in order to identify behavioral patterns related to physical activity and sleep and provide insights that could support Bellabeat’s marketing strategy and product development.
+
 
 # 📁 Data Source
 
-The dataset comes from Kaggle and contains Fitbit user data, including daily activity and sleep tracking.
+Source:  
+[FitBit Fitness Tracker Data on Kaggle](https://www.kaggle.com/datasets/arashnic/fitbit?utm_source=chatgpt.com)
 
+The dataset contains daily and hourly Fitbit activity tracking data collected from consenting users.
+
+### Data used in this project:
+- Daily activity data
+- Sleep tracking data
+- Calories burned
+- Step counts
 - 33 users
 - 410 observations (after cleaning and merging)
 - Date range: April–May 2016
-- Data: steps, calories, sleep
+
+# 🛠 Tools Used
+
+- **Excel / Google Sheets**
+  - data cleaning
+  - pivot tables
+  - exploratory analysis
+  - visualizations
+
+- **SQL**
+  - data transformation
+  - joins
+  - aggregations
+  - segmentation analysis
+  - retention analysis
+
+- **GitHub**
+  - project documentation and presentation
+
 
 # 🧹 Data Cleaning
 
@@ -23,6 +52,24 @@ The dataset comes from Kaggle and contains Fitbit user data, including daily act
 - Sleep efficiency was calculated.
 
 # 📈 Analysis
+
+## Excel Analysis
+- Average daily steps
+- Average calories burned
+- User segmentation based on activity level
+- Sleep duration analysis
+- Sleep efficiency analysis
+- Correlation analysis:
+  - Steps vs Calories
+  - Activity vs Sleep
+
+## SQL Analysis
+- Active days per user
+- User retention analysis
+- User segmentation with percentage distribution
+- Activity vs sleep aggregation
+- Summary KPI table
+- Sleep data transformation and cleaning
 
 |  | Activity|
 |:---|:---|
