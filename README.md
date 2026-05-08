@@ -121,11 +121,3 @@ Activity and sleep monitoring features should be treated as independent areas of
 - Target low-activity users with engagement campaigns
 - Introduce reminders to increase consistency of device usage
   
-# 🛠 Tools Used
-- Google Spreadsheet (data cleaning, analysis, pivot tables)
-- GitHub (project presentation)
-
-# 📌 Future Work
-- Extend analysis using SQL
-- Build dashboard in Tableau
-- Use full dataset
