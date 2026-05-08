@@ -1,0 +1,30 @@
+WITH user_avg AS (
+  SELECT
+    id,
+    AVG(TotalSteps) AS avg_steps
+  FROM `bellabeat-495609.Activity.all_steps_and_calories`
+  GROUP BY id
+),
+
+segmented AS (
+  SELECT
+    id,
+    CAST(ROUND(avg_steps, 0) AS INT64) AS avg_steps,
+    CASE
+      WHEN avg_steps < 5000 THEN 'LOW'
+      WHEN avg_steps < 10000 THEN 'MEDIUM'
+      ELSE 'HIGH'
+    END AS segment
+  FROM user_avg
+)
+
+SELECT
+  segment,
+  COUNT(*) AS users_count,
+  ROUND(
+    COUNT(*) * 100.0 / SUM(COUNT(*)) OVER(),
+    2
+  ) AS pct_share
+FROM segmented
+GROUP BY segment
+ORDER BY users_count DESC;
